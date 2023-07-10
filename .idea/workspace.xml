@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b90b062c-bece-4152-bc2b-446d7b563c73" name="Changes" comment="refactor name">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="b90b062c-bece-4152-bc2b-446d7b563c73" name="Changes" comment="registerSensor &amp; getMeasurement &amp; getMeasurement &amp; makePostRequestWithJSONSensorData">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/controllers/SensorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/controllers/SensorsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/SensorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/WeatherSensorRestApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/WeatherSensorRestApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/MeasurementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/MeasurementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SensorClient/target/classes/sensor/client/App.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,31 +58,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gosha/IdeaProjects/WeatherSensorRestAPI&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;a67db26686ece45dff041ee3726352d0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/gosha/IdeaProjects/WeatherSensorRestAPI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "a67db26686ece45dff041ee3726352d0",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle",
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -89,9 +96,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Client">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sensor.client.App" />
+      <module name="SensorClient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sensor.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sensor.client.Client" />
       <module name="SensorClient" />
       <extension name="coverage">
         <pattern>
@@ -143,14 +163,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Client" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.WeatherSensorRestApiApplication" />
       <item itemvalue="Spring Boot.WeatherSensorRestApiApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Spring Boot.WeatherSensorRestApiApplication" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.WeatherSensorRestApiApplication" />
       </list>
     </recent_temporary>
@@ -172,7 +194,7 @@
       <workItem from="1688933001405" duration="600000" />
       <workItem from="1688933875282" duration="36000" />
       <workItem from="1688933914301" duration="732000" />
-      <workItem from="1688984008328" duration="2116000" />
+      <workItem from="1688984008328" duration="9621000" />
     </task>
     <task id="LOCAL-00001" summary="init controllers">
       <created>1688934372653</created>
@@ -216,7 +238,91 @@
       <option name="project" value="LOCAL" />
       <updated>1688986275497</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=".idea files">
+      <created>1688986293890</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688986293890</updated>
+    </task>
+    <task id="LOCAL-00008" summary="register method in Service">
+      <created>1688986324308</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688986324308</updated>
+    </task>
+    <task id="LOCAL-00009" summary="register method in Controller">
+      <created>1688986334902</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688986334902</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add dependencies jackson-databind &amp; spring-web">
+      <created>1688986512419</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688986512419</updated>
+    </task>
+    <task id="LOCAL-00011" summary="del autogen main">
+      <created>1688986569695</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688986569695</updated>
+    </task>
+    <task id="LOCAL-00012" summary="new main">
+      <created>1688986868013</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688986868013</updated>
+    </task>
+    <task id="LOCAL-00013" summary="registerSensor &amp; getMeasurement &amp; getMeasurement &amp; makePostRequestWithJSONSensorData">
+      <created>1688989100262</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688989100262</updated>
+    </task>
+    <task id="LOCAL-00014" summary="controller add method">
+      <created>1688989615048</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688989615048</updated>
+    </task>
+    <task id="LOCAL-00015" summary="addMeasurement in Service &amp; del TODO">
+      <created>1688989933169</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688989933169</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change names">
+      <created>1688995117481</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688995117481</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update application.properties">
+      <created>1688995150853</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688995150853</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix type bug">
+      <created>1688995184151</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688995184151</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +335,18 @@
     <MESSAGE value="init repositories&amp;services" />
     <MESSAGE value="refactor name" />
     <MESSAGE value="fix wrong signature" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix wrong signature" />
+    <MESSAGE value=".idea files" />
+    <MESSAGE value="register method in Service" />
+    <MESSAGE value="register method in Controller" />
+    <MESSAGE value="add dependencies jackson-databind &amp; spring-web" />
+    <MESSAGE value="del autogen main" />
+    <MESSAGE value="new main" />
+    <MESSAGE value="registerSensor &amp; getMeasurement &amp; getMeasurement &amp; makePostRequestWithJSONSensorData" />
+    <MESSAGE value="controller add method" />
+    <MESSAGE value="addMeasurement in Service &amp; del TODO" />
+    <MESSAGE value="change names" />
+    <MESSAGE value="update application.properties" />
+    <MESSAGE value="fix type bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix type bug" />
   </component>
 </project>
