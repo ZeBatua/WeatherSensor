@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Measurements")
-public class Measurements {
+public class Measurement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,10 +33,10 @@ public class Measurements {
     @JoinColumn(name = "sensor", referencedColumnName = "name")
     private String sensor;
 
-    public Measurements() {
+    public Measurement() {
     }
 
-    public Measurements(Double temperature, Boolean rainStatus, LocalDateTime measurementTime, String sensor) {
+    public Measurement(Double temperature, Boolean rainStatus, LocalDateTime measurementTime, String sensor) {
         this.temperature = temperature;
         this.rainStatus = rainStatus;
         this.measurementTime = measurementTime;
