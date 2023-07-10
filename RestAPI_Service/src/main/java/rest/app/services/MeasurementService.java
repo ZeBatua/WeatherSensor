@@ -36,5 +36,3 @@ public class MeasurementService {
         measurement.setMeasurementTime(LocalDateTime.now());
     }
 }
-
-}
