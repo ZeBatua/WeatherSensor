@@ -23,7 +23,7 @@ public class MeasurementController {
 
     @PostMapping("/add")
     public ResponseEntity<HttpStatus> add(@RequestBody Measurement measurement) {
-        measurementService.addMeasurement(measurement);  // TODO
+        measurementService.addMeasurement(measurement);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
