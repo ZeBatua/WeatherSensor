@@ -6,6 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import rest.app.models.Sensor;
 import rest.app.repositories.SensorRepository;
 
+import java.util.Optional;
+
 @Service
 @Transactional(readOnly = true)
 public class SensorService {
@@ -15,6 +17,10 @@ public class SensorService {
     @Autowired
     public SensorService(SensorRepository sensorRepository) {
         this.sensorRepository = sensorRepository;
+    }
+
+    public Optional<Sensor> findByName(String name) {
+        return sensorRepository.findByName(name);
     }
 
     @Transactional
