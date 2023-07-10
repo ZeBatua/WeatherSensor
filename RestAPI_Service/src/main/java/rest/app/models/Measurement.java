@@ -30,13 +30,14 @@ public class Measurement {
     private LocalDateTime measurementTime;
 
     @NotNull(message = "Не найден сенсор, который произвел измерения")
+    @ManyToOne
     @JoinColumn(name = "sensor", referencedColumnName = "name")
-    private String sensor;
+    private Sensor sensor;
 
     public Measurement() {
     }
 
-    public Measurement(Double temperature, Boolean rainStatus, LocalDateTime measurementTime, String sensor) {
+    public Measurement(Double temperature, Boolean rainStatus, LocalDateTime measurementTime, Sensor sensor) {
         this.temperature = temperature;
         this.rainStatus = rainStatus;
         this.measurementTime = measurementTime;
@@ -75,11 +76,11 @@ public class Measurement {
         this.measurementTime = measurementTime;
     }
 
-    public String getSensor() {
+    public Sensor getSensor() {
         return sensor;
     }
 
-    public void setSensor(String sensor) {
+    public void setSensor(Sensor sensor) {
         this.sensor = sensor;
     }
 
@@ -90,7 +91,6 @@ public class Measurement {
                 ", temperature=" + temperature +
                 ", rainStatus=" + rainStatus +
                 ", measurementTime=" + measurementTime +
-                ", sensor='" + sensor + '\'' +
                 '}';
     }
 }
