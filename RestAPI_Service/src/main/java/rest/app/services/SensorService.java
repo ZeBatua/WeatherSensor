@@ -27,4 +27,5 @@ public class SensorService {
     public void register(Sensor sensor) {
         sensorRepository.save(sensor);
     }
+
 }

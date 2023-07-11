@@ -1,6 +1,7 @@
 package rest.app.util;
 
 public class MeasurementErrorResponse {
+
     private String message;
     private long timestamp;
 
@@ -24,4 +25,5 @@ public class MeasurementErrorResponse {
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
+
 }

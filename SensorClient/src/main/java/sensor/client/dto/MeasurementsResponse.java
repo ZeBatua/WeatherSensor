@@ -3,6 +3,7 @@ package sensor.client.dto;
 import java.util.List;
 
 public class MeasurementsResponse {
+
     List<MeasurementsDTO> measurements;
 
     public List<MeasurementsDTO> getMeasurements() {
@@ -19,4 +20,5 @@ public class MeasurementsResponse {
                 "measurements=" + measurements +
                 '}';
     }
+
 }

@@ -1,6 +1,7 @@
 package sensor.client.dto;
 
 public class MeasurementsDTO {
+
     private Double temperature;
     private Boolean rainStatus;
     private SensorDTO sensor;
@@ -37,5 +38,6 @@ public class MeasurementsDTO {
                 ", sensor=" + sensor +
                 '}';
     }
+
 }
 

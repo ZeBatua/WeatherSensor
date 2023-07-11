@@ -16,7 +16,6 @@ public class MeasurementService {
     MeasurementRepository measurementRepository;
     SensorService sensorService;
 
-
     @Autowired
     public MeasurementService(MeasurementRepository measurementRepository,
                               SensorService sensorService) {
@@ -40,4 +39,5 @@ public class MeasurementService {
 
         measurement.setMeasurementTime(LocalDateTime.now());
     }
+
 }

@@ -12,9 +12,9 @@ import java.util.Random;
 
 public class Client {
     public static void main(String[] args) {
-        final String sensor = "TestSensor_6";
+        final String sensor = "TestSensor_1";
 
-        registerSensor(sensor);
+        registerSensor(sensor);  // comment it if you don't want to register new sensor
         getMeasurement(sensor);
     }
 
@@ -32,7 +32,7 @@ public class Client {
 
         double minTemperature = -55.0;
         double maxTemperature = 125.0;
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 20; i++) {  // here you can change amount of measurements
             System.out.println(i);
             sendMeasurement(random.doubles(-55.0, 125).iterator().nextDouble(),
                     random.nextBoolean(), sensor);

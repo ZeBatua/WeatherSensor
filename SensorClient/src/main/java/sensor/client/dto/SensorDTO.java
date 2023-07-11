@@ -1,6 +1,7 @@
 package sensor.client.dto;
 
 public class SensorDTO {
+
     private String name;
 
     public String getName() {
@@ -17,4 +18,5 @@ public class SensorDTO {
                 "name='" + name + '\'' +
                 '}';
     }
+
 }

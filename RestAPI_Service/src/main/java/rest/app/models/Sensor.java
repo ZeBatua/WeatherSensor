@@ -50,4 +50,5 @@ public class Sensor implements Serializable {
                 ", name='" + name + '\'' +
                 '}';
     }
+
 }

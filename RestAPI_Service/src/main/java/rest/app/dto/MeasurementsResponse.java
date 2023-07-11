@@ -4,6 +4,7 @@ import java.util.List;
 
 
 public class MeasurementsResponse {
+
     private List<MeasurementDTO> measurements;
 
     public MeasurementsResponse(List<MeasurementDTO> measurements) {
@@ -17,4 +18,5 @@ public class MeasurementsResponse {
     public void setMeasurements(List<MeasurementDTO> measurements) {
         this.measurements = measurements;
     }
+
 }

@@ -20,7 +20,6 @@ public class Measurement {
     @Column(name = "temperature")
     private Double temperature;
 
-
     @NotNull(message = "Не удалось зафиксировать идет ли дождь")
     @Column(name = "rain_status")
     private Boolean rainStatus;
@@ -93,4 +92,5 @@ public class Measurement {
                 ", measurementTime=" + measurementTime +
                 '}';
     }
+
 }

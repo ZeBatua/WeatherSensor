@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class DrawGraph {
+
     public static void main(String[] args) {
         List<Double> temparatures = getTemperaturesData();
         draw(temparatures);
@@ -39,4 +40,5 @@ public class DrawGraph {
 
         new SwingWrapper(chart).displayChart();
     }
+
 }
