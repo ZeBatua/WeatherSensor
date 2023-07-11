@@ -7,6 +7,7 @@ import rest.app.models.Measurement;
 import rest.app.repositories.MeasurementRepository;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -21,6 +22,10 @@ public class MeasurementService {
                               SensorService sensorService) {
         this.measurementRepository = measurementRepository;
         this.sensorService = sensorService;
+    }
+
+    public List<Measurement> findAll() {
+        return measurementRepository.findAll();
     }
 
     @Transactional
