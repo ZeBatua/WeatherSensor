@@ -4,6 +4,8 @@ import org.knowm.xchart.QuickChart;
 import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.XYChart;
 import org.springframework.web.client.RestTemplate;
+import sensor.client.dto.MeasurementsDTO;
+import sensor.client.dto.MeasurementsResponse;
 
 import java.util.Collections;
 import java.util.List;
@@ -24,7 +26,7 @@ public class DrawGraph {
         if (jsonResponse == null || jsonResponse.getMeasurements() == null)
             return Collections.emptyList();
 
-        return jsonResponse.getMeasurements().stream().map(Measurements::getValue)
+        return jsonResponse.getMeasurements().stream().map(MeasurementsDTO::getTemperature)
                 .collect(Collectors.toList());
     }
 
