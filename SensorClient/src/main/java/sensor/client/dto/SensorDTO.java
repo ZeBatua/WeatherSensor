@@ -1,6 +1,6 @@
-package sensor.client;
+package sensor.client.dto;
 
-public class Sensor {
+public class SensorDTO {
     private String name;
 
     public String getName() {

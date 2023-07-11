@@ -1,9 +1,9 @@
-package sensor.client;
+package sensor.client.dto;
 
-public class Measurements {
+public class MeasurementsDTO {
     private Double value;
     private Boolean isRaining;
-    private Sensor sensor;
+    private SensorDTO sensor;
 
     public Double getValue() {
         return value;
@@ -21,11 +21,11 @@ public class Measurements {
         isRaining = raining;
     }
 
-    public Sensor getSensor() {
+    public SensorDTO getSensor() {
         return sensor;
     }
 
-    public void setSensor(Sensor sensor) {
+    public void setSensor(SensorDTO sensor) {
         this.sensor = sensor;
     }
 }
