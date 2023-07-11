@@ -5,17 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b90b062c-bece-4152-bc2b-446d7b563c73" name="Changes" comment="fix name &amp; add get temperature method &amp; d">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9c0793e1-a7c1-4045-8ac4-f327820b89f2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9c0793e1-a7c1-4045-8ac4-f327820b89f2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9c0793e1-a7c1-4045-8ac4-f327820b89f2/storage_v2/_src_/database/WeatherSensorDB.rHWmtQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9c0793e1-a7c1-4045-8ac4-f327820b89f2/storage_v2/_src_/database/WeatherSensorDB.rHWmtQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/WeatherSensorRestApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/WeatherSensorRestApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/sql/initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/sql/initDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/controllers/SensorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/controllers/SensorsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/dto/MeasurementDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/dto/MeasurementDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/dto/MeasurementsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/dto/MeasurementsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/dto/SensorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/dto/SensorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/models/Measurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/models/Measurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/models/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/models/Sensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/MeasurementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/MeasurementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/services/SensorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/util/MeasurementErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/util/MeasurementErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/util/SensorValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestAPI_Service/src/main/java/rest/app/util/SensorValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/DrawGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/DrawGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/dto/MeasurementsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/dto/MeasurementsDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/dto/MeasurementsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/dto/MeasurementsResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/dto/SensorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/SensorClient/src/main/java/sensor/client/dto/SensorDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SensorClient/target/classes/sensor/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/SensorClient/target/classes/sensor/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SensorClient/target/classes/sensor/client/DrawGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/SensorClient/target/classes/sensor/client/DrawGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +93,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "spring.configuration.checksum": "c415c0d7cef1aa38734602d55aebd7b9",
     "vue.rearranger.settings.migration": "true"
   },
@@ -196,8 +205,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.DrawGraph" />
-        <item itemvalue="Spring Boot.WeatherSensorRestApiApplication" />
         <item itemvalue="Application.Client" />
+        <item itemvalue="Spring Boot.WeatherSensorRestApiApplication" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.WeatherSensorRestApiApplication" />
       </list>
@@ -221,7 +230,7 @@
       <workItem from="1688933875282" duration="36000" />
       <workItem from="1688933914301" duration="732000" />
       <workItem from="1688984008328" duration="10678000" />
-      <workItem from="1689087939669" duration="4155000" />
+      <workItem from="1689087939669" duration="7308000" />
     </task>
     <task id="LOCAL-00001" summary="init controllers">
       <created>1688934372653</created>
@@ -447,22 +456,78 @@
       <option name="project" value="LOCAL" />
       <updated>1689090852890</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="target &amp; .idea">
+      <created>1689092347487</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1689092347487</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fix names">
+      <created>1689092382132</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1689092382132</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix wrong names &amp; toString">
+      <created>1689092499667</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1689092499667</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add custom exception for client">
+      <created>1689093628666</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1689093628666</updated>
+    </task>
+    <task id="LOCAL-00037" summary="add MeasurementValidator">
+      <created>1689093656167</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1689093656167</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add validation &amp; exception handler method">
+      <created>1689093719094</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1689093719094</updated>
+    </task>
+    <task id="LOCAL-00039" summary="add SensorValidator">
+      <created>1689094221718</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1689094221718</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add validation &amp; error handler &amp; dto converter">
+      <created>1689094269646</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1689094269646</updated>
+    </task>
+    <task id="LOCAL-00041" summary="getRainyDaysCount method (get mapping)">
+      <created>1689094350007</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1689094350007</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="register method in Service" />
-    <MESSAGE value="register method in Controller" />
-    <MESSAGE value="add dependencies jackson-databind &amp; spring-web" />
-    <MESSAGE value="del autogen main" />
-    <MESSAGE value="new main" />
-    <MESSAGE value="registerSensor &amp; getMeasurement &amp; getMeasurement &amp; makePostRequestWithJSONSensorData" />
-    <MESSAGE value="controller add method" />
-    <MESSAGE value="addMeasurement in Service &amp; del TODO" />
-    <MESSAGE value="change names" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="update application.properties" />
     <MESSAGE value="fix type bug" />
     <MESSAGE value=".idea &amp; target" />
@@ -479,6 +544,15 @@
     <MESSAGE value="get new version modelMapper" />
     <MESSAGE value="add model mapper bean" />
     <MESSAGE value="convertor methods &amp; getMeasurements mapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="convertor methods &amp; getMeasurements mapping" />
+    <MESSAGE value="target &amp; .idea" />
+    <MESSAGE value="fix names" />
+    <MESSAGE value="fix wrong names &amp; toString" />
+    <MESSAGE value="add custom exception for client" />
+    <MESSAGE value="add MeasurementValidator" />
+    <MESSAGE value="add validation &amp; exception handler method" />
+    <MESSAGE value="add SensorValidator" />
+    <MESSAGE value="add validation &amp; error handler &amp; dto converter" />
+    <MESSAGE value="getRainyDaysCount method (get mapping)" />
+    <option name="LAST_COMMIT_MESSAGE" value="getRainyDaysCount method (get mapping)" />
   </component>
 </project>
